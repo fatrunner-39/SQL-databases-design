@@ -1,0 +1,5 @@
+create table if not exists employee(
+	id serial primary key,
+	emp_name varchar(100) not null,
+	department varchar(50) not null unique,
+	chief integer references employee(id));
